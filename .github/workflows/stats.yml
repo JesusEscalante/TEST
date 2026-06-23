@@ -1,42 +1,54 @@
-name: STATS
+name: 📊 Actualizar Estadísticas de Lenguajes
 
 on:
-  # Ejecutar automáticamente en cada push a main
   push:
     branches: [ main ]
-  # Ejecutar diariamente a las 00:00 UTC
   schedule:
     - cron: '0 0 * * *'
-  # Permitir ejecución manual
   workflow_dispatch:
 
 jobs:
   actualizar-estadisticas:
     runs-on: ubuntu-latest
     
+    # 👇 AUMENTA LOS PERMISOS AQUÍ
+    permissions:
+      contents: write  # Permiso para escribir en el repositorio
+      actions: read    # Para leer acciones
+    
     steps:
-      - name: Checkout código
+      - name: 📥 Checkout código
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # Usa el token explícitamente
       
-      - name: Configurar Python
+      - name: 🐍 Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       
-      - name: Instalar dependencias
+      - name: 📦 Instalar dependencias
         run: |
           pip install requests
       
-      - name: Ejecutar script de estadísticas
+      - name: 🚀 Ejecutar script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python stats.py
       
-      - name: Commit y push de estadísticas
+      - name: 📤 Subir artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: estadisticas
+          path: estadisticas_lenguajes.json
+      
+      - name: 💾 Commit y push
         run: |
-          git config --local user.email "jesus-13-14@hotmail.com"
-          git config --local user.name "JesusEscalante"
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
           git add estadisticas_lenguajes.json README.md 2>/dev/null || true
-          git commit -m "📊 Actualizar estadísticas de lenguajes [skip ci]" || echo "No hay cambios"
+          git diff --staged --quiet || git commit -m "📊 Actualizar estadísticas de lenguajes [skip ci]"
           git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
