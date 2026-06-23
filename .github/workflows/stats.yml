@@ -1,4 +1,4 @@
-name: Actualizar Estadísticas de Lenguajes
+name: STATS
 
 on:
   # Ejecutar automáticamente en cada push a main
@@ -35,8 +35,8 @@ jobs:
       
       - name: Commit y push de estadísticas
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.email "jesus-13-14@hotmail.com"
+          git config --local user.name "JesusEscalante"
           git add estadisticas_lenguajes.json README.md 2>/dev/null || true
           git commit -m "📊 Actualizar estadísticas de lenguajes [skip ci]" || echo "No hay cambios"
           git push
