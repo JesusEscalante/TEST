@@ -254,3 +254,42 @@ Para preguntas o soporte, contacta al equipo de desarrollo.
 ---
 
 **Nota**: Esta aplicación requiere Firebase para funcionar. Asegúrate de tener configurado Firebase correctamente antes de ejecutarla.
+
+
+<!-- ESTADISTICAS_START -->
+## 📊 Estadísticas de lenguajes
+
+**Repositorio:** JesusEscalante/TEST
+**⭐ Estrellas:** 0
+**🔀 Forks:** 0
+**📦 Total código:** 0.57 MB
+
+### Lenguajes utilizados
+
+| Lenguaje | Porcentaje | Tamaño |
+|----------|------------|--------|
+| Dart | 89.14% | 0.51 MB |
+| C++ | 4.37% | 0.02 MB |
+| CMake | 3.35% | 0.02 MB |
+| Python | 1.56% | 0.01 MB |
+| JavaScript | 0.57% | 0.0 MB |
+| Swift | 0.53% | 0.0 MB |
+| C | 0.24% | 0.0 MB |
+| HTML | 0.21% | 0.0 MB |
+| Kotlin | 0.02% | 0.0 MB |
+| Objective-C | 0.01% | 0.0 MB |
+
+### Distribución visual
+```
+Dart         ████████████████████████████████████████████ 89.14%
+C++          ██ 4.37%
+CMake        █ 3.35%
+Python        1.56%
+JavaScript    0.57%
+Swift         0.53%
+C             0.24%
+HTML          0.21%
+Kotlin        0.02%
+Objective-C   0.01%
+```
+<!-- ESTADISTICAS_END -->

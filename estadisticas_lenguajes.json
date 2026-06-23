@@ -1,0 +1,37 @@
+{
+  "nombre": "TEST",
+  "dueño": "JesusEscalante",
+  "lenguajes": {
+    "Dart": 530367,
+    "C++": 26013,
+    "CMake": 19945,
+    "Python": 9294,
+    "JavaScript": 3366,
+    "Swift": 3171,
+    "C": 1425,
+    "HTML": 1232,
+    "Kotlin": 123,
+    "Objective-C": 38
+  },
+  "porcentajes": {
+    "Dart": 89.14,
+    "C++": 4.37,
+    "CMake": 3.35,
+    "Python": 1.56,
+    "JavaScript": 0.57,
+    "Swift": 0.53,
+    "C": 0.24,
+    "HTML": 0.21,
+    "Kotlin": 0.02,
+    "Objective-C": 0.01
+  },
+  "total_bytes": 594974,
+  "total_kb": 581.03,
+  "total_mb": 0.57,
+  "numero_lenguajes": 10,
+  "lenguaje_principal": "Dart",
+  "repo_publico": true,
+  "estrellas": 0,
+  "forks": 0,
+  "ultima_actualizacion": "2026-06-23T17:16:30Z"
+}
